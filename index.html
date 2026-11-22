@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ganga Motor Driving Training School | Govt. Approved Driving Institute</title>
+  <meta name="description" content="Learn driving with confidence at Ganga Motor Driving Training School. Govt. certified instructors, dual-control cars, doorstep pickup, and guaranteed RTO license assistance.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              500: '#0284c7',
+              600: '#0369a1',
+              700: '#075985',
+              800: '#0c4a6e',
+            },
+            safety: {
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased selection:bg-sky-500 selection:text-white">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-slate-900 text-slate-300 text-xs py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-2">
+      <div class="flex items-center space-x-3">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/30">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 mr-1"></i> RTO Govt. Regd: DL/2011/5892
+        </span>
+        <span class="hidden sm:inline text-slate-400">|</span>
+        <span class="hidden sm:inline text-slate-300">गंगा मोटर ड्राइविंग ट्रेनिंग स्कूल - सुरक्षित ड्राइविंग, सुनहरा भविष्य</span>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a href="tel:+918957519919" class="hover:text-emerald-400 flex items-center transition">
+          <i data-lucide="phone-call" class="w-3.5 h-3.5 mr-1 text-emerald-400"></i> +91 89575 19919
+        </a>
+        <span>•</span>
+        <a href="tel:+918090519188" class="hover:text-emerald-400 flex items-center transition">
+          <i data-lucide="phone" class="w-3.5 h-3.5 mr-1 text-sky-400"></i> +91 80905 19188
+        </a>
+        <span>•</span>
+        <span class="flex items-center text-slate-300">
+          <i data-lucide="clock" class="w-3.5 h-3.5 mr-1 text-amber-400"></i> 6:00 AM - 8:00 PM (Daily)
+        </span>
+        <span>•</span>
+        <button onclick="openStudentAuthModal()" class="text-emerald-400 hover:text-white flex items-center transition font-semibold" title="Student Portal">
+          <i data-lucide="user-check" class="w-3.5 h-3.5 mr-1 text-emerald-400"></i> <span id="top-student-label">Student Portal</span>
+        </button>
+        <span>•</span>
+        <button onclick="openAdminModal()" class="text-slate-400 hover:text-white flex items-center transition" title="Staff Portal">
+          <i data-lucide="lock" class="w-3 h-3 mr-1 text-sky-400"></i> Staff Portal
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN NAVIGATION BAR -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        
+        <!-- Brand Logo -->
+        <a href="#home" class="flex items-center space-x-3 group">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-sky-600 via-sky-500 to-emerald-500 flex items-center justify-center text-white shadow-md shadow-sky-500/20 group-hover:scale-105 transition-transform">
+            <!-- Steering Wheel Icon SVG -->
+            <svg class="w-7 h-7 hover-steer" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <circle cx="12" cy="12" r="2.5"></circle>
+              <line x1="12" y1="2" x2="12" y2="9.5"></line>
+              <line x1="2" y1="12" x2="9.5" y2="12"></line>
+              <line x1="14.5" y1="12" x2="22" y2="12"></line>
+              <path d="M7 17l3.5-3.5"></path>
+              <path d="M17 17l-3.5-3.5"></path>
+            </svg>
+          </div>
+          <div>
+            <div class="flex items-center space-x-1.5">
+              <span class="text-xl sm:text-2xl font-extrabold tracking-tight text-slate-900 font-heading">GANGA</span>
+              <span class="text-xl sm:text-2xl font-bold tracking-tight text-sky-600 font-heading">MOTOR</span>
+            </div>
+            <p class="text-[11px] font-medium uppercase tracking-wider text-slate-500">Driving Training School</p>
+          </div>
+        </a>
+
+        <!-- Desktop Nav Links -->
+        <nav class="hidden lg:flex items-center space-x-7 text-sm font-semibold text-slate-700">
+          <a href="#courses" class="hover:text-sky-600 transition flex items-center py-2">Courses</a>
+          <a href="#calculator" class="hover:text-sky-600 transition flex items-center py-2">
+            Fee Calculator <span class="ml-1.5 text-[10px] bg-amber-100 text-amber-800 font-bold px-1.5 py-0.5 rounded-full">Interactive</span>
+          </a>
+          <a href="#rto-quiz" class="hover:text-sky-600 transition flex items-center py-2">
+            RTO Mock Test <span class="ml-1.5 text-[10px] bg-emerald-100 text-emerald-800 font-bold px-1.5 py-0.5 rounded-full">Free Quiz</span>
+          </a>
+          <a href="#fleet" class="hover:text-sky-600 transition flex items-center py-2">Dual-Control Fleet</a>
+          <a href="#instructors" class="hover:text-sky-600 transition flex items-center py-2">Instructors</a>
+          <a href="#license-guide" class="hover:text-sky-600 transition flex items-center py-2">License Guide</a>
+          <a href="#contact" class="hover:text-sky-600 transition flex items-center py-2">Contact</a>
+        </nav>
+
+        <!-- CTA & Student Buttons -->
+        <div class="hidden sm:flex items-center space-x-2.5">
+          <a href="https://wa.me/918957519919?text=Hi%20Ganga%20Motor%20Driving%20School,%20I%20want%20to%20inquire%20about%20driving%20classes." target="_blank" class="p-2.5 rounded-xl border border-emerald-200 text-emerald-600 bg-emerald-50 hover:bg-emerald-100 transition shadow-sm" title="Chat on WhatsApp">
+            <i data-lucide="message-circle" class="w-5 h-5"></i>
+          </a>
+          
+          <!-- Student Login / Profile Pill Button -->
+          <button id="student-auth-btn" onclick="openStudentAuthModal()" class="px-3.5 py-2.5 rounded-xl border border-sky-200 bg-sky-50/80 hover:bg-sky-100 text-sky-800 font-bold text-xs sm:text-sm transition flex items-center shadow-sm">
+            <i data-lucide="user" class="w-4 h-4 mr-1.5 text-sky-600"></i>
+            <span id="student-auth-label">Student Login</span>
+          </button>
+
+          <button onclick="openBookingModal()" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-sky-600 to-sky-500 hover:from-sky-700 hover:to-sky-600 text-white font-semibold text-sm shadow-md shadow-sky-500/25 hover:shadow-lg hover:shadow-sky-500/40 transition-all flex items-center">
+            <i data-lucide="calendar-plus" class="w-4 h-4 mr-2"></i> Book Trial Class
+          </button>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <div class="lg:hidden flex items-center space-x-2">
+          <button onclick="openStudentAuthModal()" class="px-2.5 py-1.5 rounded-lg border border-sky-300 text-sky-700 text-xs font-bold flex items-center">
+            <i data-lucide="user" class="w-3.5 h-3.5 mr-1"></i> <span id="mobile-student-btn-label">Login</span>
+          </button>
+          <button onclick="openBookingModal()" class="px-3 py-1.5 rounded-lg bg-sky-600 text-white text-xs font-semibold">Book</button>
+          <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="p-2 rounded-lg text-slate-700 hover:bg-slate-100">
+            <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 bg-white px-4 pt-3 pb-6 space-y-3 shadow-xl">
+      <a href="#courses" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">Courses & Packages</a>
+      <a href="#calculator" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">Fee Calculator</a>
+      <a href="#rto-quiz" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">RTO Parivahan Mock Test</a>
+      <a href="#fleet" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">Dual-Control Car Fleet</a>
+      <a href="#instructors" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">Trainers (Male & Female)</a>
+      <a href="#license-guide" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">Driving License Roadmap</a>
+      <a href="#contact" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-50">Contact & Branches</a>
+      <div class="pt-2 border-t border-slate-100 flex flex-col gap-2">
+        <button onclick="toggleMobileMenu(); openStudentAuthModal()" class="w-full py-2.5 rounded-xl border border-sky-300 bg-sky-50 text-sky-800 font-bold text-sm flex items-center justify-center">
+          <i data-lucide="user-check" class="w-4 h-4 mr-2 text-sky-600"></i> Student Portal (Dashboard & ID)
+        </button>
+        <button onclick="toggleMobileMenu(); openBookingModal()" class="w-full py-3 rounded-xl bg-sky-600 text-white font-semibold text-center shadow-md">
+          Book Your Driving Slot
+        </button>
+        <button onclick="toggleMobileMenu(); openAdminModal()" class="w-full py-2 rounded-xl border border-slate-300 text-slate-700 font-medium text-xs flex items-center justify-center">
+          <i data-lucide="lock" class="w-3.5 h-3.5 mr-1 text-slate-500"></i> Staff / Instructor Portal
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="relative overflow-hidden hero-gradient pt-8 pb-16 lg:pt-16 lg:pb-24 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Content -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-sky-100/80 text-sky-800 text-xs sm:text-sm font-semibold border border-sky-200">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>Admissions Open for New Morning & Evening Batches</span>
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.15]">
+            Master Driving with <span class="bg-gradient-to-r from-sky-600 to-emerald-600 bg-clip-text text-transparent">100% Confidence</span> & Total Safety
+          </h1>
+
+          <p class="text-lg text-slate-600 max-w-2xl leading-relaxed">
+            Welcome to <span class="font-bold text-slate-800">Ganga Motor Driving Training School</span>. Learn with certified patient instructors on dual-control modern cars. Doorstep pickup, flexible timing, and guaranteed RTO Permanent License test training.
+          </p>
+
+          <!-- Key Highlights Bullet Cards -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+            <div class="bg-white/80 p-3 rounded-xl border border-slate-200 shadow-sm flex items-start space-x-2.5">
+              <div class="p-1.5 rounded-lg bg-emerald-100 text-emerald-700 shrink-0">
+                <i data-lucide="shield-check" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-slate-900">Dual-Control Cars</h4>
+                <p class="text-[11px] text-slate-500">Zero-risk safety pedals</p>
+              </div>
+            </div>
+
+            <div class="bg-white/80 p-3 rounded-xl border border-slate-200 shadow-sm flex items-start space-x-2.5">
+              <div class="p-1.5 rounded-lg bg-sky-100 text-sky-700 shrink-0">
+                <i data-lucide="map-pin" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-slate-900">Doorstep Pickup</h4>
+                <p class="text-[11px] text-slate-500">Home & office pickup</p>
+              </div>
+            </div>
+
+            <div class="bg-white/80 p-3 rounded-xl border border-slate-200 shadow-sm flex items-start space-x-2.5 col-span-2 sm:col-span-1">
+              <div class="p-1.5 rounded-lg bg-amber-100 text-amber-700 shrink-0">
+                <i data-lucide="award" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <h4 class="text-xs font-bold text-slate-900">99.4% Pass Rate</h4>
+                <p class="text-[11px] text-slate-500">RTO test track prep</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- CTAs & Trust Badges -->
+          <div class="flex flex-wrap items-center gap-4 pt-3">
+            <button onclick="openBookingModal()" class="px-7 py-4 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-bold text-base shadow-xl shadow-sky-600/30 hover:shadow-sky-600/50 hover:-translate-y-0.5 transition-all flex items-center">
+              <i data-lucide="car" class="w-5 h-5 mr-2"></i> Enroll for Driving Class
+            </button>
+            <a href="#rto-quiz" class="px-6 py-4 rounded-xl bg-white hover:bg-slate-100 text-slate-800 font-bold text-base border border-slate-300 shadow-sm transition flex items-center">
+              <i data-lucide="file-check-2" class="w-5 h-5 mr-2 text-emerald-600"></i> Free RTO Mock Test
+            </a>
+          </div>
+
+          <!-- Rating & Social Proof -->
+          <div class="flex items-center space-x-4 pt-4 border-t border-slate-200/80">
+            <div class="flex -space-x-2 overflow-hidden">
+              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Student">
+              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Student">
+              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" alt="Student">
+              <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=100&q=80" alt="Student">
+            </div>
+            <div>
+              <div class="flex items-center text-amber-400">
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                <span class="ml-2 font-bold text-slate-800 text-sm">4.9/5</span>
+              </div>
+              <p class="text-xs text-slate-500">Over <span class="font-semibold text-slate-700">14,500+ confident drivers</span> trained since 2011</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Quick Booking Widget -->
+        <div class="lg:col-span-5">
+          <div class="bg-white rounded-2xl shadow-xl shadow-slate-200/60 border border-slate-200 p-6 sm:p-7 relative overflow-hidden">
+            <div class="absolute top-0 right-0 bg-gradient-to-l from-emerald-500 to-teal-500 text-white text-[11px] font-bold px-3 py-1 rounded-bl-xl shadow-sm">
+              ⚡ Limited Batch Slots
+            </div>
+            
+            <div class="mb-5">
+              <h3 class="text-xl font-bold text-slate-900 font-heading">Book Instant Seat / Inquiry</h3>
+              <p class="text-xs text-slate-500 mt-1">Get special ₹1,000 seasonal discount + Free RTO prep guide</p>
+            </div>
+
+            <form id="hero-quick-form" onsubmit="handleHeroQuickBooking(event)" class="space-y-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Your Full Name *</label>
+                <div class="relative">
+                  <i data-lucide="user" class="w-4 h-4 absolute left-3 top-3 text-slate-400"></i>
+                  <input type="text" id="hero-name" required placeholder="e.g. Rahul Sharma" class="w-full pl-9 pr-3 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none">
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Phone Number (WhatsApp) *</label>
+                <div class="relative">
+                  <span class="absolute left-3 top-2.5 text-xs font-semibold text-slate-500">+91</span>
+                  <input type="tel" id="hero-phone" required pattern="[0-9]{10}" placeholder="8957519919" class="w-full pl-12 pr-3 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 focus:border-sky-500 outline-none">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1">Course Type</label>
+                  <select id="hero-course" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-sky-500 outline-none">
+                    <option value="Beginner 4-Wheeler Car Training">4-Wheeler Beginner (15 Days)</option>
+                    <option value="Comprehensive Car Mastery + DL Package">Comprehensive 4-Wheeler + DL (21 Days)</option>
+                    <option value="Automatic Car Specialization (AMT/CVT)">Automatic AMT Car (15 Days)</option>
+                    <option value="Two-Wheeler Balance (Scooty / Bike)">Two-Wheeler Scooty/Bike (7 Days)</option>
+                    <option value="Confidence Refresher / Crash Course">Refresher / Traffic Phobia (7 Days)</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1">Preferred Timing</label>
+                  <select id="hero-timing" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-sky-500 outline-none">
+                    <option value="Early Morning (6:00 AM - 9:00 AM)">Morning (6 AM - 9 AM)</option>
+                    <option value="Daytime (10:00 AM - 4:00 PM)">Day (10 AM - 4 PM)</option>
+                    <option value="Evening (5:00 PM - 8:00 PM)">Evening (5 PM - 8 PM)</option>
+                    <option value="Weekend Only (Sat & Sun)">Weekend Only</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Pickup Area / Landmark</label>
+                <div class="relative">
+                  <i data-lucide="map-pin" class="w-4 h-4 absolute left-3 top-3 text-slate-400"></i>
+                  <input type="text" id="hero-pickup" placeholder="e.g. Sector 14, Near City Metro" class="w-full pl-9 pr-3 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 outline-none">
+                </div>
+              </div>
+
+              <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold text-sm shadow-lg shadow-emerald-600/25 transition-all flex items-center justify-center">
+                <i data-lucide="check-circle" class="w-4 h-4 mr-2"></i> Confirm My Free Consultation & Slot
+              </button>
+            </form>
+
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+              <span class="flex items-center"><i data-lucide="lock" class="w-3.5 h-3.5 mr-1 text-slate-400"></i> No spam, 100% privacy</span>
+              <span class="text-emerald-600 font-semibold flex items-center"><i data-lucide="zap" class="w-3.5 h-3.5 mr-1"></i> Instant Call-back</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY STATS COUNTER BAR -->
+  <section class="bg-slate-900 text-white py-10 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-800">
+        <div class="pt-4 md:pt-0">
+          <div class="text-3xl sm:text-4xl font-extrabold text-sky-400 font-heading">14,500+</div>
+          <div class="text-xs sm:text-sm font-medium text-slate-400 mt-1">Students Successfully Trained</div>
+        </div>
+        <div class="pt-4 md:pt-0">
+          <div class="text-3xl sm:text-4xl font-extrabold text-emerald-400 font-heading">99.4%</div>
+          <div class="text-xs sm:text-sm font-medium text-slate-400 mt-1">RTO First-Attempt Pass Rate</div>
+        </div>
+        <div class="pt-4 md:pt-0">
+          <div class="text-3xl sm:text-4xl font-extrabold text-amber-400 font-heading">15+ Years</div>
+          <div class="text-xs sm:text-sm font-medium text-slate-400 mt-1">Excellence in Driver Education</div>
+        </div>
+        <div class="pt-4 md:pt-0">
+          <div class="text-3xl sm:text-4xl font-extrabold text-purple-400 font-heading">12 Cars</div>
+          <div class="text-xs sm:text-sm font-medium text-slate-400 mt-1">Dual-Control Sanitized Fleet</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DUAL-CONTROL SAFETY EXPLANATION BANNER -->
+  <section class="py-12 bg-sky-900 text-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-slate-800/90 border border-sky-500/30 rounded-2xl p-6 sm:p-8 flex flex-col lg:flex-row items-center justify-between gap-6">
+        <div class="space-y-2 max-w-2xl">
+          <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-amber-400/20 text-amber-300 border border-amber-400/30">
+            <i data-lucide="shield-alert" class="w-3.5 h-3.5 mr-1.5"></i> 100% Fear-Free Learning Guarantee
+          </div>
+          <h3 class="text-2xl font-bold font-heading text-white">How Our Dual-Control Safety Pedals Protect You</h3>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Nervous about your first time behind the wheel? Every vehicle at Ganga Driving School is fitted with secondary instructor-side brake and clutch controls. If you ever hesitate or panic, your certified instructor can instantly stop the car. You will never crash or stall dangerously.
+          </p>
+        </div>
+        <div class="flex items-center space-x-3 shrink-0">
+          <a href="#fleet" class="px-5 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-semibold text-sm transition flex items-center shadow-md">
+            <i data-lucide="eye" class="w-4 h-4 mr-2"></i> Inspect Our Fleet
+          </a>
+          <button onclick="openBookingModal()" class="px-5 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-white font-semibold text-sm transition flex items-center shadow-md">
+            <i data-lucide="calendar" class="w-4 h-4 mr-2"></i> Book A Test Drive
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES & PACKAGES SECTION -->
+  <section id="courses" class="py-20 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-sky-600 font-bold text-xs uppercase tracking-wider bg-sky-100 px-3 py-1 rounded-full">Tailored Training Programs</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 font-heading">Driving Courses & Fee Structure</h2>
+        <p class="text-slate-600 mt-3 text-sm sm:text-base">Transparent pricing with zero hidden charges. Choose from beginner four-wheelers, automatic cars, two-wheelers, or refresher packages.</p>
+        
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap justify-center gap-2 mt-8" id="course-filter-buttons">
+          <button onclick="filterCourses('all')" class="course-filter-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition bg-sky-600 text-white shadow-sm" data-category="all">All Programs</button>
+          <button onclick="filterCourses('car')" class="course-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-category="car">4-Wheeler Car</button>
+          <button onclick="filterCourses('automatic')" class="course-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-category="automatic">Automatic (AMT)</button>
+          <button onclick="filterCourses('two-wheeler')" class="course-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-category="two-wheeler">Two-Wheeler</button>
+          <button onclick="filterCourses('refresher')" class="course-filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition bg-white text-slate-700 hover:bg-slate-100 border border-slate-200" data-category="refresher">Refresher (7-Days)</button>
+        </div>
+      </div>
+
+      <!-- Course Cards Grid -->
+      <div id="course-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE FEE & CUSTOM PACKAGE CALCULATOR -->
+  <section id="calculator" class="py-20 bg-white border-y border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-amber-600 font-bold text-xs uppercase tracking-wider bg-amber-100 px-3 py-1 rounded-full">Custom Plan Estimator</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 font-heading">Interactive Course Fee Calculator</h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">Customize your vehicle model, duration, transmission, and add-ons to see real-time discounted pricing.</p>
+      </div>
+
+      <div class="bg-slate-50 border border-slate-200 rounded-3xl p-6 sm:p-10 shadow-sm max-w-4xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Controls Column -->
+          <div class="lg:col-span-7 space-y-6">
+            
+            <!-- Vehicle Type -->
+            <div>
+              <label class="block text-sm font-bold text-slate-800 mb-2">1. Select Vehicle Type</label>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
+                <button type="button" onclick="setCalcVehicle('hatchback', 4500)" class="calc-veh-btn active p-3 rounded-xl border-2 border-sky-600 bg-sky-50 text-left transition" data-veh="hatchback">
+                  <div class="font-bold text-xs sm:text-sm text-slate-900">Hatchback</div>
+                  <div class="text-[11px] text-slate-500">Swift / WagonR</div>
+                </button>
+                <button type="button" onclick="setCalcVehicle('sedan', 5200)" class="calc-veh-btn p-3 rounded-xl border border-slate-200 bg-white text-left hover:border-slate-300 transition" data-veh="sedan">
+                  <div class="font-bold text-xs sm:text-sm text-slate-900">Sedan</div>
+                  <div class="text-[11px] text-slate-500">Dzire / Amaze</div>
+                </button>
+                <button type="button" onclick="setCalcVehicle('suv', 6500)" class="calc-veh-btn p-3 rounded-xl border border-slate-200 bg-white text-left hover:border-slate-300 transition" data-veh="suv">
+                  <div class="font-bold text-xs sm:text-sm text-slate-900">Compact SUV</div>
+                  <div class="text-[11px] text-slate-500">Tata Nexon</div>
+                </button>
+                <button type="button" onclick="setCalcVehicle('twowheeler', 2200)" class="calc-veh-btn p-3 rounded-xl border border-slate-200 bg-white text-left hover:border-slate-300 transition" data-veh="twowheeler">
+                  <div class="font-bold text-xs sm:text-sm text-slate-900">Two-Wheeler</div>
+                  <div class="text-[11px] text-slate-500">Activa / Bike</div>
+                </button>
+                <button type="button" onclick="setCalcVehicle('owncar', 3200)" class="calc-veh-btn p-3 rounded-xl border border-slate-200 bg-white text-left hover:border-slate-300 transition col-span-2 sm:col-span-1" data-veh="owncar">
+                  <div class="font-bold text-xs sm:text-sm text-slate-900">Own Car Training</div>
+                  <div class="text-[11px] text-slate-500">Trainer in your car</div>
+                </button>
+              </div>
+            </div>
+
+            <!-- Transmission -->
+            <div>
+              <label class="block text-sm font-bold text-slate-800 mb-2">2. Transmission Type</label>
+              <div class="flex gap-3">
+                <label class="flex-1 cursor-pointer">
+                  <input type="radio" name="calc-transmission" value="manual" checked onchange="updateCalculator()" class="peer sr-only">
+                  <div class="p-3 rounded-xl border-2 border-slate-200 peer-checked:border-sky-600 peer-checked:bg-sky-50 text-center font-bold text-sm text-slate-700 peer-checked:text-sky-700 transition">
+                    Manual (Clutch & Gear)
+                  </div>
+                </label>
+                <label class="flex-1 cursor-pointer">
+                  <input type="radio" name="calc-transmission" value="automatic" onchange="updateCalculator()" class="peer sr-only">
+                  <div class="p-3 rounded-xl border-2 border-slate-200 peer-checked:border-sky-600 peer-checked:bg-sky-50 text-center font-bold text-sm text-slate-700 peer-checked:text-sky-700 transition">
+                    Automatic (+₹1,000)
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <!-- Duration Days -->
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <label class="text-sm font-bold text-slate-800">3. Course Duration</label>
+                <span id="calc-days-label" class="text-xs font-bold bg-sky-100 text-sky-800 px-2 py-0.5 rounded-full">15 Days (Recommended)</span>
+              </div>
+              <input type="range" id="calc-duration-slider" min="7" max="30" step="1" value="15" oninput="handleDurationSlider(this.value)" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-sky-600">
+              <div class="flex justify-between text-[11px] text-slate-500 mt-1">
+                <span>7 Days (Crash/Refresher)</span>
+                <span>15 Days (Standard)</span>
+                <span>21 Days (Comprehensive)</span>
+                <span>30 Days (Pro VIP)</span>
+              </div>
+            </div>
+
+            <!-- Optional Add-ons -->
+            <div>
+              <label class="block text-sm font-bold text-slate-800 mb-2">4. Optional Value Add-ons</label>
+              <div class="space-y-2.5">
+                <label class="flex items-center justify-between p-3 rounded-xl bg-white border border-slate-200 cursor-pointer hover:border-slate-300">
+                  <div class="flex items-center space-x-2.5">
+                    <input type="checkbox" id="addon-pickup" onchange="updateCalculator()" class="rounded text-sky-600 focus:ring-sky-500 w-4 h-4">
+                    <div>
+                      <div class="text-xs sm:text-sm font-semibold text-slate-800">Doorstep Pick-up & Drop Service</div>
+                      <div class="text-[11px] text-slate-500">Pick from home/office directly</div>
+                    </div>
+                  </div>
+                  <span class="text-xs font-bold text-slate-700">+₹800</span>
+                </label>
+
+                <label class="flex items-center justify-between p-3 rounded-xl bg-white border border-slate-200 cursor-pointer hover:border-slate-300">
+                  <div class="flex items-center space-x-2.5">
+                    <input type="checkbox" id="addon-license" checked onchange="updateCalculator()" class="rounded text-sky-600 focus:ring-sky-500 w-4 h-4">
+                    <div>
+                      <div class="text-xs sm:text-sm font-semibold text-slate-800">RTO Permanent DL Application & Slot Booking</div>
+                      <div class="text-[11px] text-slate-500">Complete Parivahan file & test slot coordination</div>
+                    </div>
+                  </div>
+                  <span class="text-xs font-bold text-slate-700">+₹1,500</span>
+                </label>
+
+                <label class="flex items-center justify-between p-3 rounded-xl bg-white border border-slate-200 cursor-pointer hover:border-slate-300">
+                  <div class="flex items-center space-x-2.5">
+                    <input type="checkbox" id="addon-weekend" onchange="updateCalculator()" class="rounded text-sky-600 focus:ring-sky-500 w-4 h-4">
+                    <div>
+                      <div class="text-xs sm:text-sm font-semibold text-slate-800">Weekend Only Priority Slot (Sat & Sun)</div>
+                      <div class="text-[11px] text-slate-500">Dedicated slots for working executives</div>
+                    </div>
+                  </div>
+                  <span class="text-xs font-bold text-slate-700">+₹500</span>
+                </label>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Total Summary Column -->
+          <div class="lg:col-span-5 bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+            <h4 class="text-base font-bold text-slate-900 border-b border-slate-100 pb-3 font-heading">Price Breakdown</h4>
+
+            <div class="space-y-3 py-4 text-xs sm:text-sm">
+              <div class="flex justify-between text-slate-600">
+                <span id="breakdown-base-label">Base Training (15 Days Hatchback):</span>
+                <span id="breakdown-base-price" class="font-semibold text-slate-800">₹4,500</span>
+              </div>
+              <div class="flex justify-between text-slate-600" id="breakdown-trans-row" style="display:none;">
+                <span>Automatic Transmission Upgrade:</span>
+                <span class="font-semibold text-slate-800">+₹1,000</span>
+              </div>
+              <div class="flex justify-between text-slate-600" id="breakdown-addons-row">
+                <span>Selected Add-ons:</span>
+                <span id="breakdown-addons-price" class="font-semibold text-slate-800">+₹1,500</span>
+              </div>
+              <div class="flex justify-between text-emerald-600" id="breakdown-discount-row">
+                <span>Special Seasonal Offer (Auto-Applied):</span>
+                <span id="breakdown-discount-price" class="font-semibold">-₹1,000</span>
+              </div>
+            </div>
+
+            <!-- Coupon Input -->
+            <div class="pt-3 border-t border-slate-100">
+              <label class="block text-xs font-semibold text-slate-700 mb-1.5">Have a Promo Coupon?</label>
+              <div class="flex gap-2">
+                <input type="text" id="calc-coupon" placeholder="Use 'DRIVE2026'" class="flex-1 px-3 py-2 text-xs uppercase rounded-lg border border-slate-300 focus:ring-2 focus:ring-sky-500 outline-none">
+                <button type="button" onclick="applyCoupon()" class="px-3 py-2 bg-slate-800 hover:bg-slate-900 text-white text-xs font-bold rounded-lg transition">Apply</button>
+              </div>
+              <p id="coupon-status" class="text-[11px] text-emerald-600 font-semibold mt-1">💡 Coupon 'GANGA1000' applied for extra ₹500 off!</p>
+            </div>
+
+            <!-- Final Amount -->
+            <div class="mt-6 pt-4 border-t-2 border-slate-100 flex items-baseline justify-between">
+              <div>
+                <span class="text-xs text-slate-500 block">Total All-Inclusive Fee</span>
+                <span class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-heading" id="calc-final-price">₹4,500</span>
+              </div>
+              <span class="text-[11px] bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded-full">Save ₹1,500</span>
+            </div>
+
+            <button onclick="bookCalculatedPackage()" class="w-full mt-5 py-3.5 rounded-xl bg-gradient-to-r from-sky-600 to-sky-500 hover:from-sky-700 hover:to-sky-600 text-white font-bold text-sm shadow-lg shadow-sky-600/25 transition flex items-center justify-center">
+              <i data-lucide="check" class="w-4 h-4 mr-2"></i> Book This Custom Plan
+            </button>
+            <p class="text-[11px] text-center text-slate-400 mt-2">Token booking available at ₹500 only</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE RTO DRIVING LICENSE MOCK TEST (QUIZ ENGINE) -->
+  <section id="rto-quiz" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center mb-10">
+        <span class="text-emerald-400 font-bold text-xs uppercase tracking-wider bg-emerald-400/20 border border-emerald-400/30 px-3 py-1 rounded-full">
+          Parivahan Sarathi Mock Test
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 font-heading">
+          Official RTO Learner License Practice Exam
+        </h2>
+        <p class="text-slate-300 mt-2 text-sm sm:text-base max-w-2xl mx-auto">
+          Test your road signs, traffic regulations, and safety knowledge before facing the computerized RTO test. Passing criteria: 9 out of 15 questions.
+        </p>
+      </div>
+
+      <!-- Quiz Box Container -->
+      <div id="quiz-container" class="bg-slate-800/90 backdrop-blur-md border border-slate-700 rounded-3xl p-6 sm:p-8 shadow-2xl">
+        
+        <!-- Welcome Screen -->
+        <div id="quiz-welcome" class="text-center py-8 space-y-6">
+          <div class="w-20 h-20 rounded-2xl bg-sky-500/20 border border-sky-500/40 text-sky-400 mx-auto flex items-center justify-center">
+            <i data-lucide="award" class="w-10 h-10"></i>
+          </div>
+
+          <div class="space-y-2">
+            <h3 class="text-2xl font-bold font-heading text-white">Ready to test your driving IQ?</h3>
+            <p class="text-sm text-slate-300 max-w-md mx-auto">
+              15 real Indian RTO questions including traffic signs, overtaking rules, right-of-way, and speed limits. 30 seconds per question with instant explanations.
+            </p>
+          </div>
+
+          <div class="flex flex-wrap justify-center gap-4 text-xs text-slate-400">
+            <span class="flex items-center"><i data-lucide="check" class="w-4 h-4 mr-1 text-emerald-400"></i> 15 Questions</span>
+            <span class="flex items-center"><i data-lucide="clock" class="w-4 h-4 mr-1 text-amber-400"></i> 30s per question</span>
+            <span class="flex items-center"><i data-lucide="file-badge" class="w-4 h-4 mr-1 text-sky-400"></i> Instant Certificate</span>
+          </div>
+
+          <button onclick="startRTOQuiz()" class="px-8 py-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base shadow-lg shadow-emerald-600/30 transition transform hover:-translate-y-0.5">
+            Start RTO Mock Test Now
+          </button>
+        </div>
+
+        <!-- Question View (Hidden Initially) -->
+        <div id="quiz-play" class="hidden space-y-6">
+          <!-- Top Bar: Progress & Timer -->
+          <div class="flex justify-between items-center pb-4 border-b border-slate-700">
+            <div class="flex items-center space-x-2">
+              <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Question</span>
+              <span id="quiz-progress-text" class="text-sm font-bold text-sky-400">1 of 15</span>
+            </div>
+            
+            <div class="flex items-center space-x-2 bg-slate-900/80 px-3 py-1.5 rounded-full border border-slate-700">
+              <i data-lucide="timer" class="w-4 h-4 text-amber-400"></i>
+              <span id="quiz-timer" class="text-xs font-mono font-bold text-amber-300">30s</span>
+            </div>
+
+            <div class="text-xs font-bold text-emerald-400">
+              Score: <span id="quiz-live-score">0</span>
+            </div>
+          </div>
+
+          <!-- Progress Bar -->
+          <div class="w-full bg-slate-700 h-2 rounded-full overflow-hidden">
+            <div id="quiz-progress-bar" class="bg-gradient-to-r from-sky-500 to-emerald-500 h-2 rounded-full transition-all duration-300" style="width: 6.66%;"></div>
+          </div>
+
+          <!-- Question Content -->
+          <div class="space-y-4">
+            <div id="quiz-sign-display" class="py-2 text-center"></div>
+            
+            <h3 id="quiz-question-title" class="text-lg sm:text-xl font-bold text-white text-center leading-snug">
+              Question text goes here
+            </h3>
+          </div>
+
+          <!-- Options Grid -->
+          <div id="quiz-options-list" class="grid grid-cols-1 gap-3 pt-2">
+            <!-- Dynamically populated -->
+          </div>
+
+          <!-- Explanation Box (Appears after answer) -->
+          <div id="quiz-explanation-box" class="hidden p-4 rounded-xl bg-slate-900/90 border border-slate-700 text-xs sm:text-sm text-slate-300 space-y-1">
+            <span class="font-bold text-sky-400 block flex items-center">
+              <i data-lucide="info" class="w-4 h-4 mr-1.5"></i> RTO Rule Explanation:
+            </span>
+            <p id="quiz-explanation-text"></p>
+          </div>
+
+          <!-- Next Button -->
+          <div class="flex justify-end pt-2">
+            <button id="quiz-next-btn" onclick="nextQuestion()" class="hidden px-6 py-3 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-sm shadow-md transition flex items-center">
+              <span>Next Question</span> <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Result Screen (Hidden Initially) -->
+        <div id="quiz-result" class="hidden text-center py-6 space-y-6">
+          <div id="result-badge-icon" class="w-20 h-20 rounded-full mx-auto flex items-center justify-center text-3xl"></div>
+          
+          <div class="space-y-1">
+            <h3 id="result-status-title" class="text-2xl sm:text-3xl font-extrabold font-heading text-white">Congratulations! You Passed!</h3>
+            <p id="result-status-subtitle" class="text-sm text-slate-300">You scored <span id="result-score-number" class="font-bold text-emerald-400">14/15</span> (Passing mark: 9/15)</p>
+          </div>
+
+          <!-- Certificate Preview Area -->
+          <div id="quiz-certificate" class="max-w-md mx-auto bg-gradient-to-b from-white to-slate-100 text-slate-900 p-6 rounded-2xl border-4 border-amber-400 shadow-xl text-center space-y-3 relative overflow-hidden">
+            <div class="text-[10px] uppercase font-bold tracking-widest text-slate-400">Ganga Motor Driving Training School</div>
+            <h4 class="text-lg font-extrabold text-sky-900 font-heading">CERTIFICATE OF RTO READINESS</h4>
+            <p class="text-xs text-slate-600">This certifies that</p>
+            <div id="cert-student-name" class="text-base font-bold text-slate-900 border-b border-dashed border-slate-400 pb-1 inline-block px-4">Learner Driver</div>
+            <p class="text-[11px] text-slate-500">has successfully mastered Indian Motor Vehicles Act traffic signs, road regulations & safe driving rules with a score of <span id="cert-score" class="font-bold text-emerald-700">93%</span>.</p>
+            <div class="flex justify-between items-center text-[10px] text-slate-500 pt-3 border-t border-slate-200">
+              <span>Date: Nov 2026</span>
+              <span class="font-bold text-slate-700">Govt. Reg: DL/2011/5892</span>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap justify-center gap-3 pt-4">
+            <button onclick="printCertificate()" class="px-5 py-3 rounded-xl bg-white text-slate-900 hover:bg-slate-100 font-bold text-sm shadow-md transition flex items-center">
+              <i data-lucide="printer" class="w-4 h-4 mr-2"></i> Print / Save Certificate
+            </button>
+            <button onclick="startRTOQuiz()" class="px-5 py-3 rounded-xl bg-slate-700 hover:bg-slate-600 text-white font-bold text-sm transition flex items-center">
+              <i data-lucide="rotate-ccw" class="w-4 h-4 mr-2"></i> Retake Test
+            </button>
+            <button onclick="openBookingModal()" class="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm shadow-lg shadow-emerald-600/30 transition flex items-center">
+              <i data-lucide="car" class="w-4 h-4 mr-2"></i> Enroll for Road Training
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DUAL-CONTROL FLEET & TECHNOLOGY SHOWCASE -->
+  <section id="fleet" class="py-20 bg-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-sky-600 font-bold text-xs uppercase tracking-wider bg-sky-100 px-3 py-1 rounded-full">Our Training Vehicles</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 font-heading">Modern Dual-Control Sanitized Fleet</h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">All vehicles are fully air-conditioned, GPS tracked, equipped with dual instructor pedals, and regularly serviced.</p>
+      </div>
+
+      <!-- Fleet Grid -->
+      <div id="fleet-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Rendered dynamically from data.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DRIVING LICENSE 4-STEP ROADMAP -->
+  <section id="license-guide" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-emerald-600 font-bold text-xs uppercase tracking-wider bg-emerald-100 px-3 py-1 rounded-full">Sarathi Parivahan Guide</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 font-heading">How to Get Your Permanent Driving License</h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">We handle everything from document submission and online test slot booking to driving track training and final license delivery.</p>
+      </div>
+
+      <!-- Roadmap Steps -->
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 relative">
+        
+        <!-- Step 1 -->
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 relative">
+          <div class="w-10 h-10 rounded-xl bg-sky-600 text-white font-extrabold flex items-center justify-center mb-4 text-base shadow-md">1</div>
+          <h4 class="text-lg font-bold text-slate-900 mb-2">Learner's License (LL)</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">Submit Aadhaar, age proof & Form 1A medical fitness. Clear computerized Parivahan test. Valid for 6 months.</p>
+          <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] font-semibold text-sky-700 flex items-center">
+            <i data-lucide="check-circle" class="w-3.5 h-3.5 mr-1 text-emerald-600"></i> Free school assistance
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 relative">
+          <div class="w-10 h-10 rounded-xl bg-sky-600 text-white font-extrabold flex items-center justify-center mb-4 text-base shadow-md">2</div>
+          <h4 class="text-lg font-bold text-slate-900 mb-2">15-21 Days Road Training</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">Daily practical sessions in city traffic, slope launches, reverse parking, and dual-control confidence drills.</p>
+          <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] font-semibold text-sky-700 flex items-center">
+            <i data-lucide="check-circle" class="w-3.5 h-3.5 mr-1 text-emerald-600"></i> Doorstep pickup
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 relative">
+          <div class="w-10 h-10 rounded-xl bg-sky-600 text-white font-extrabold flex items-center justify-center mb-4 text-base shadow-md">3</div>
+          <h4 class="text-lg font-bold text-slate-900 mb-2">RTO Track Simulation</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">Practice on automated RTO tracks: H-Track, 8-Track, parallel parking bays, and gradient hill-start stops.</p>
+          <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] font-semibold text-sky-700 flex items-center">
+            <i data-lucide="check-circle" class="w-3.5 h-3.5 mr-1 text-emerald-600"></i> Zero failure trial
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 relative">
+          <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white font-extrabold flex items-center justify-center mb-4 text-base shadow-md">4</div>
+          <h4 class="text-lg font-bold text-slate-900 mb-2">Permanent DL Issued!</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">Take the official driving test in our school car accompanied by our instructor. Permanent Smart Card DL dispatched to your home.</p>
+          <div class="mt-4 pt-3 border-t border-slate-200 text-[11px] font-semibold text-emerald-700 flex items-center">
+            <i data-lucide="award" class="w-3.5 h-3.5 mr-1 text-emerald-600"></i> 99.4% pass record
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Required Documents Info Box -->
+      <div class="mt-12 bg-sky-50 border border-sky-200 rounded-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-start space-x-4">
+          <div class="p-3 bg-sky-600 text-white rounded-xl shrink-0">
+            <i data-lucide="file-text" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="text-base font-bold text-slate-900 font-heading">Documents Required for Driving License:</h4>
+            <p class="text-xs sm:text-sm text-slate-600 mt-1">1. Aadhaar Card (with active phone linked) | 2. 10th Marksheet / Birth Certificate | 3. 3 Passport Photos | 4. Blood Group report.</p>
+          </div>
+        </div>
+        <button onclick="openBookingModal()" class="shrink-0 px-5 py-2.5 rounded-xl bg-sky-600 hover:bg-sky-700 text-white text-xs sm:text-sm font-semibold transition">
+          Get Document Assistance
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CERTIFIED INSTRUCTORS (MALE & FEMALE TRAINERS) -->
+  <section id="instructors" class="py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <span class="text-sky-600 font-bold text-xs uppercase tracking-wider bg-sky-100 px-3 py-1 rounded-full">Expert Mentorship</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 font-heading">Our Certified Driving Instructors</h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">Govt. certified, police-verified, courteous, and polite trainers. Dedicated female instructors available for female learners.</p>
+      </div>
+
+      <!-- Instructors Grid -->
+      <div id="instructors-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Rendered dynamically from data.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STUDENT TESTIMONIALS & REVIEWS -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+        <div>
+          <span class="text-amber-600 font-bold text-xs uppercase tracking-wider bg-amber-100 px-3 py-1 rounded-full">Real Student Experiences</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 font-heading">What Our Students Say</h2>
+          <p class="text-slate-600 mt-2 text-sm sm:text-base">Over 1,450+ 5-star reviews on Google and Justdial.</p>
+        </div>
+        <button onclick="openReviewModal()" class="mt-4 md:mt-0 px-5 py-2.5 rounded-xl border border-slate-300 hover:bg-slate-50 text-slate-800 font-semibold text-xs sm:text-sm transition flex items-center">
+          <i data-lucide="edit-3" class="w-4 h-4 mr-2 text-amber-500"></i> Write a Student Review
+        </button>
+      </div>
+
+      <!-- Testimonial Cards -->
+      <div id="testimonials-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Rendered dynamically from data.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQS ACCORDION -->
+  <section class="py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <span class="text-sky-600 font-bold text-xs uppercase tracking-wider bg-sky-100 px-3 py-1 rounded-full">Clear Answers</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3 font-heading">Frequently Asked Questions</h2>
+        <p class="text-slate-600 mt-2 text-sm sm:text-base">Everything you need to know about learning to drive with Ganga Motor Driving School.</p>
+      </div>
+
+      <div id="faqs-accordion" class="space-y-3">
+        <!-- Rendered dynamically from data.js -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT & BRANCH LOCATIONS -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Contact Info -->
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-sky-600 font-bold text-xs uppercase tracking-wider bg-sky-100 px-3 py-1 rounded-full">Visit or Call Us</span>
+          <h2 class="text-3xl font-extrabold text-slate-900 font-heading">We are Ready to Help You Start Driving</h2>
+          <p class="text-sm text-slate-600 leading-relaxed">
+            Have questions about slot availability or need customized batch timings? Reach out to our training counselors or visit our RTO campus branch.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            
+            <div class="flex items-start space-x-3.5">
+              <div class="p-2.5 rounded-xl bg-sky-100 text-sky-700 shrink-0">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-slate-900">Head Office & Training Track:</h4>
+                <p class="text-xs text-slate-600 mt-0.5">Plot No. 42, Ganga Complex, Opp. Regional Transport Office (RTO), Main Ring Road</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3.5">
+              <div class="p-2.5 rounded-xl bg-sky-100 text-sky-700 shrink-0">
+                <i data-lucide="building" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-slate-900">City Branch:</h4>
+                <p class="text-xs text-slate-600 mt-0.5">Shop 14, Metro Pillar 218, Sector 12 Market</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3.5">
+              <div class="p-2.5 rounded-xl bg-emerald-100 text-emerald-700 shrink-0">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-slate-900">Direct Hotline:</h4>
+                <p class="text-xs text-slate-600 mt-0.5">+91 89575 19919 / +91 80905 19188</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-3.5">
+              <div class="p-2.5 rounded-xl bg-amber-100 text-amber-700 shrink-0">
+                <i data-lucide="clock" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-slate-900">Operating Hours:</h4>
+                <p class="text-xs text-slate-600 mt-0.5">6:00 AM – 8:00 PM (Monday to Sunday, All 7 Days)</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="pt-4 flex items-center space-x-4">
+            <a href="https://wa.me/918957519919" target="_blank" class="px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs sm:text-sm flex items-center shadow-md shadow-emerald-600/20 transition">
+              <i data-lucide="message-circle" class="w-4 h-4 mr-2"></i> WhatsApp Inquiry
+            </a>
+            <a href="tel:+918957519919" class="px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-xs sm:text-sm flex items-center transition">
+              <i data-lucide="phone-call" class="w-4 h-4 mr-2"></i> Call Now
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form / Quick Inquiry -->
+        <div class="lg:col-span-7 bg-slate-50 border border-slate-200 rounded-2xl p-6 sm:p-8">
+          <h3 class="text-xl font-bold text-slate-900 font-heading mb-1">Send a Message to Training Manager</h3>
+          <p class="text-xs text-slate-500 mb-6">We typically reply within 15 minutes during operating hours.</p>
+
+          <form onsubmit="handleContactSubmit(event)" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Your Name *</label>
+                <input type="text" id="contact-name" required placeholder="Full Name" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 outline-none">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Phone Number *</label>
+                <input type="tel" id="contact-phone" required placeholder="10-digit mobile" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 outline-none">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Email Address</label>
+                <input type="email" id="contact-email" placeholder="name@example.com" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 outline-none">
+              </div>
+              <div>
+                <label class="block text-xs font-semibold text-slate-700 mb-1">Interested In</label>
+                <select id="contact-interest" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-sky-500 outline-none">
+                  <option value="4-Wheeler Car Training">4-Wheeler Car Training</option>
+                  <option value="Automatic Car Training">Automatic Car Training</option>
+                  <option value="Two-Wheeler Scooty/Bike">Two-Wheeler Scooty/Bike</option>
+                  <option value="Refresher Traffic Phobia">Refresher Course</option>
+                  <option value="Permanent DL Application">Permanent DL Application</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-semibold text-slate-700 mb-1">Message or Queries</label>
+              <textarea id="contact-message" rows="3" placeholder="Tell us if you need doorstep pickup, female instructor, specific morning/evening slot..." class="w-full px-3 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 outline-none"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-3.5 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-bold text-sm shadow-md shadow-sky-600/25 transition flex items-center justify-center">
+              <i data-lucide="send" class="w-4 h-4 mr-2"></i> Submit Inquiry
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-400 text-sm py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <div class="space-y-3">
+          <div class="flex items-center space-x-2">
+            <span class="text-xl font-extrabold text-white font-heading">GANGA</span>
+            <span class="text-xl font-bold text-sky-400 font-heading">MOTOR</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Govt. Certified Driving School (Reg. RTO/DL/2011/5892). Empowering thousands of students with safe, defensive, and accident-free driving habits since 2011.
+          </p>
+          <div class="text-xs text-emerald-400 font-semibold flex items-center pt-1">
+            <i data-lucide="check-circle-2" class="w-3.5 h-3.5 mr-1"></i> ISO 9001:2015 Safety Standard
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-3">Courses</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#courses" class="hover:text-white transition">Beginner 4-Wheeler (15 Days)</a></li>
+            <li><a href="#courses" class="hover:text-white transition">Comprehensive Mastery + DL (21 Days)</a></li>
+            <li><a href="#courses" class="hover:text-white transition">Automatic Car (AMT/CVT)</a></li>
+            <li><a href="#courses" class="hover:text-white transition">Confidence Booster Refresher</a></li>
+            <li><a href="#courses" class="hover:text-white transition">Two-Wheeler Scooty Balance</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-3">Student Tools</h4>
+          <ul class="space-y-2 text-xs">
+            <li><a href="#rto-quiz" class="hover:text-white transition flex items-center"><i data-lucide="chevron-right" class="w-3 h-3 mr-1 text-emerald-400"></i> Free RTO Mock Exam</a></li>
+            <li><a href="#calculator" class="hover:text-white transition flex items-center"><i data-lucide="chevron-right" class="w-3 h-3 mr-1 text-sky-400"></i> Course Fee Calculator</a></li>
+            <li><a href="#license-guide" class="hover:text-white transition flex items-center"><i data-lucide="chevron-right" class="w-3 h-3 mr-1 text-amber-400"></i> DL Document Checklist</a></li>
+            <li><button onclick="openAdminModal()" class="hover:text-white transition flex items-center text-left"><i data-lucide="lock" class="w-3 h-3 mr-1 text-slate-400"></i> Staff Portal Login</button></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-3">Operating Batches</h4>
+          <ul class="space-y-2 text-xs">
+            <li><span class="text-slate-300">Morning:</span> 6:00 AM – 9:00 AM</li>
+            <li><span class="text-slate-300">Mid-day:</span> 10:00 AM – 4:00 PM</li>
+            <li><span class="text-slate-300">Evening:</span> 5:00 PM – 8:00 PM</li>
+            <li><span class="text-slate-300">Weekend:</span> Saturday & Sunday Special</li>
+            <li class="pt-2 text-sky-400 font-semibold">Doorstep Pick & Drop across town</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+        <p>© 2026 Ganga Motor Driving Training School. All rights reserved.</p>
+        <p>Built with Safety & Care for India's Future Drivers 🇮🇳</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP CHAT BUTTON -->
+  <a href="https://wa.me/918957519919?text=Hello%20Ganga%20Driving%20School,%20I%20would%20like%20to%20know%20more%20about%20your%20driving%20classes." target="_blank" class="fixed bottom-6 right-6 z-40 bg-emerald-500 hover:bg-emerald-600 text-white p-3.5 rounded-full shadow-2xl shadow-emerald-500/50 flex items-center justify-center transition-all hover:scale-110 group" title="Chat on WhatsApp">
+    <i data-lucide="message-circle" class="w-7 h-7"></i>
+    <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 ease-in-out text-xs font-bold px-0 group-hover:px-2">WhatsApp Us</span>
+  </a>
+
+  <!-- ==================== MODALS ==================== -->
+
+  <!-- 1. COURSE SYLLABUS MODAL -->
+  <div id="syllabus-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 space-y-6">
+      <div class="flex justify-between items-start border-b border-slate-100 pb-4">
+        <div>
+          <span id="modal-syllabus-badge" class="text-[10px] font-bold uppercase tracking-wider bg-sky-100 text-sky-800 px-2.5 py-0.5 rounded-full">Curriculum</span>
+          <h3 id="modal-syllabus-title" class="text-xl sm:text-2xl font-bold text-slate-900 font-heading mt-1">Course Curriculum</h3>
+        </div>
+        <button onclick="closeSyllabusModal()" class="p-2 rounded-xl text-slate-400 hover:text-slate-600 hover:bg-slate-100">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div id="modal-syllabus-content" class="space-y-4">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <div class="flex justify-end pt-4 border-t border-slate-100 gap-3">
+        <button onclick="closeSyllabusModal()" class="px-5 py-2.5 rounded-xl border border-slate-200 text-slate-700 font-semibold text-xs sm:text-sm">Close</button>
+        <button onclick="bookCurrentSyllabusCourse()" class="px-6 py-2.5 rounded-xl bg-sky-600 text-white font-bold text-xs sm:text-sm shadow-md hover:bg-sky-700">Book This Course</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. INTERACTIVE BOOKING / ADMISSION MODAL -->
+  <div id="booking-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl shadow-2xl max-w-xl w-full max-h-[92vh] overflow-y-auto p-6 sm:p-8 space-y-6">
+      
+      <div class="flex justify-between items-start border-b border-slate-100 pb-4">
+        <div>
+          <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2.5 py-0.5 rounded-full">Reserve Your Slot</span>
+          <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 font-heading mt-1">Driving Admission & Booking</h3>
+        </div>
+        <button onclick="closeBookingModal()" class="p-2 rounded-xl text-slate-400 hover:text-slate-600 hover:bg-slate-100">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <form id="admission-form" onsubmit="submitAdmissionBooking(event)" class="space-y-4">
+        
+        <!-- Course Selection -->
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Select Driving Program *</label>
+          <select id="book-course" onchange="syncBookingPrice()" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-sky-500 outline-none">
+            <!-- Dynamically populated from data.js -->
+          </select>
+        </div>
+
+        <!-- Transmission & Vehicle -->
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Transmission</label>
+            <select id="book-transmission" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-sky-500 outline-none">
+              <option value="Manual (Clutch/Gear)">Manual (5-Speed Clutch)</option>
+              <option value="Automatic (AMT/CVT)">Automatic (Clutchless AMT)</option>
+              <option value="Two-Wheeler Gearless">Two-Wheeler Gearless</option>
+              <option value="Two-Wheeler Geared">Two-Wheeler Geared Bike</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Preferred Time Slot *</label>
+            <select id="book-slot" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-sky-500 outline-none">
+              <option value="6:00 AM - 6:45 AM">6:00 AM - 6:45 AM (Early Bird)</option>
+              <option value="7:00 AM - 7:45 AM">7:00 AM - 7:45 AM (Popular)</option>
+              <option value="8:00 AM - 8:45 AM">8:00 AM - 8:45 AM</option>
+              <option value="10:00 AM - 10:45 AM">10:00 AM - 10:45 AM</option>
+              <option value="4:00 PM - 4:45 PM">4:00 PM - 4:45 PM</option>
+              <option value="5:00 PM - 5:45 PM">5:00 PM - 5:45 PM (Evening)</option>
+              <option value="6:00 PM - 6:45 PM">6:00 PM - 6:45 PM (Dusk/Night)</option>
+              <option value="Weekend Special (Sat & Sun)">Weekend Special (Sat & Sun)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Start Date & Instructor Preference -->
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Preferred Start Date *</label>
+            <input type="date" id="book-date" required class="w-full px-3 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Trainer Preference</label>
+            <select id="book-instructor" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-sky-500 outline-none">
+              <option value="Any Certified Trainer">Any Senior Trainer</option>
+              <option value="Sunita Verma (Female Trainer)">Sunita Verma (Female Trainer)</option>
+              <option value="Pooja Mishra (Female Trainer)">Pooja Mishra (Female Trainer)</option>
+              <option value="Rajesh Sharma (Head Trainer)">Rajesh Sharma (Head Trainer)</option>
+              <option value="Vikram Chauhan (SUV/Highway)">Vikram Chauhan (SUV/Highway)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Student Contact Info -->
+        <div class="space-y-3 pt-1">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Student Full Name *</label>
+            <input type="text" id="book-name" required placeholder="As per Aadhaar Card" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 outline-none">
+          </div>
+
+          <div class="grid grid-cols-2 gap-3">
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Mobile (WhatsApp) *</label>
+              <input type="tel" id="book-phone" required pattern="[0-9]{10}" placeholder="10-digit mobile" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 outline-none">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Email Address</label>
+              <input type="email" id="book-email" placeholder="name@email.com" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 outline-none">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Pickup Address / Nearest Landmark *</label>
+            <input type="text" id="book-pickup" required placeholder="e.g. House 42, Sector 15 or City Metro Gate 1" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 outline-none">
+          </div>
+        </div>
+
+        <!-- Payment Mode -->
+        <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+          <div class="flex justify-between items-center mb-2">
+            <span class="text-xs font-bold text-slate-800">Total Course Fee:</span>
+            <span id="book-price-display" class="text-base font-extrabold text-sky-700 font-heading">₹4,500</span>
+          </div>
+          
+          <label class="block text-xs font-bold text-slate-700 mb-1.5">Payment Option:</label>
+          <div class="grid grid-cols-3 gap-2 text-xs">
+            <label class="flex items-center space-x-1.5 p-2 rounded-lg bg-white border border-slate-300 cursor-pointer">
+              <input type="radio" name="payment-mode" value="Token Paid (₹500)" checked class="text-sky-600">
+              <span class="font-semibold text-slate-800">Token ₹500</span>
+            </label>
+            <label class="flex items-center space-x-1.5 p-2 rounded-lg bg-white border border-slate-300 cursor-pointer">
+              <input type="radio" name="payment-mode" value="Full Paid Online" class="text-sky-600">
+              <span class="font-semibold text-slate-800">Full Payment</span>
+            </label>
+            <label class="flex items-center space-x-1.5 p-2 rounded-lg bg-white border border-slate-300 cursor-pointer">
+              <input type="radio" name="payment-mode" value="Pay on Day 1" class="text-sky-600">
+              <span class="font-semibold text-slate-800">Pay on Day 1</span>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white font-bold text-sm shadow-lg shadow-emerald-600/30 transition flex items-center justify-center">
+          <i data-lucide="check-circle" class="w-4 h-4 mr-2"></i> Confirm Booking & Generate Admission Slip
+        </button>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- 3. OFFICIAL PRINTABLE ADMISSION SLIP / RECEIPT MODAL -->
+  <div id="receipt-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl shadow-2xl max-w-xl w-full max-h-[92vh] overflow-y-auto p-6 sm:p-8 space-y-6">
+      
+      <!-- Printable Container -->
+      <div id="printable-area" class="border-2 border-slate-800 rounded-2xl p-6 bg-white space-y-5 relative">
+        
+        <!-- Header -->
+        <div class="border-b-2 border-slate-800 pb-4 text-center space-y-1">
+          <div class="text-[10px] uppercase font-bold tracking-widest text-slate-500">Government Registered Training Institute</div>
+          <h2 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight font-heading">GANGA MOTOR DRIVING TRAINING SCHOOL</h2>
+          <p class="text-xs text-slate-600">Opp. Regional Transport Office (RTO), Main Ring Road | Ph: +91 89575 19919 / +91 80905 19188</p>
+          <div class="inline-block px-3 py-0.5 rounded-full bg-slate-900 text-white text-[11px] font-bold mt-1">OFFICIAL ADMISSION CONFIRMATION SLIP</div>
+        </div>
+
+        <!-- Details Grid -->
+        <div class="grid grid-cols-2 gap-4 text-xs">
+          <div>
+            <span class="text-slate-500 block">Booking Reference ID:</span>
+            <span id="slip-id" class="font-mono font-bold text-slate-900 text-sm">GMD-2026-0000</span>
+          </div>
+          <div>
+            <span class="text-slate-500 block">Date of Booking:</span>
+            <span id="slip-booking-date" class="font-bold text-slate-900">Nov 19, 2026</span>
+          </div>
+          <div>
+            <span class="text-slate-500 block">Student Name:</span>
+            <span id="slip-name" class="font-bold text-slate-900 text-sm">Rahul Sharma</span>
+          </div>
+          <div>
+            <span class="text-slate-500 block">Contact Phone:</span>
+            <span id="slip-phone" class="font-bold text-slate-900">+91 89575 19919</span>
+          </div>
+          <div class="col-span-2">
+            <span class="text-slate-500 block">Course Enrolled:</span>
+            <span id="slip-course" class="font-bold text-sky-800 text-sm">Beginner 4-Wheeler Car Training</span>
+          </div>
+          <div>
+            <span class="text-slate-500 block">Batch Timing:</span>
+            <span id="slip-timing" class="font-bold text-slate-900">7:00 AM - 7:45 AM</span>
+          </div>
+          <div>
+            <span class="text-slate-500 block">Batch Start Date:</span>
+            <span id="slip-start-date" class="font-bold text-slate-900">Nov 22, 2026</span>
+          </div>
+          <div class="col-span-2">
+            <span class="text-slate-500 block">Doorstep Pickup Landmark:</span>
+            <span id="slip-pickup" class="font-bold text-slate-900">Sector 15, Near City Metro Station</span>
+          </div>
+          <div>
+            <span class="text-slate-500 block">Total Course Fee:</span>
+            <span id="slip-amount" class="font-bold text-slate-900 text-sm">₹4,500</span>
+          </div>
+          <div>
+            <span class="text-slate-500 block">Payment Mode / Status:</span>
+            <span id="slip-payment-status" class="font-bold text-emerald-700">Token Paid (₹500)</span>
+          </div>
+        </div>
+
+        <!-- Instructions Box -->
+        <div class="bg-slate-50 p-3 rounded-xl border border-slate-200 text-[11px] text-slate-600 space-y-1">
+          <p class="font-bold text-slate-800">Student Instructions for Day 1:</p>
+          <p>1. Please carry your original Aadhaar Card and 2 passport photos.</p>
+          <p>2. Wear comfortable flat footwear (avoid high heels or heavy boots).</p>
+          <p>3. Your assigned instructor will call you 15 minutes before the pickup time.</p>
+        </div>
+
+        <!-- Seal / Signature Row -->
+        <div class="pt-6 flex justify-between items-end border-t border-slate-200 text-[11px] text-slate-500">
+          <div>
+            <span class="inline-flex items-center text-emerald-700 font-bold">
+              <i data-lucide="check-circle-2" class="w-4 h-4 mr-1"></i> RTO Regd. Authorized Stamp
+            </span>
+          </div>
+          <div class="text-right">
+            <div class="font-signature font-bold text-slate-800 text-sm">Ganga Motor Driving School</div>
+            <span>Authorized Signatory</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap justify-between items-center gap-3 no-print">
+        <button onclick="closeReceiptModal()" class="px-4 py-2 rounded-xl border border-slate-300 text-slate-700 text-xs font-semibold">
+          Close
+        </button>
+        <div class="flex gap-2">
+          <a id="slip-whatsapp-btn" href="#" target="_blank" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center shadow-md">
+            <i data-lucide="message-circle" class="w-4 h-4 mr-1.5"></i> Send to WhatsApp
+          </a>
+          <button onclick="window.print()" class="px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold flex items-center shadow-md">
+            <i data-lucide="printer" class="w-4 h-4 mr-1.5"></i> Print Admission Slip
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 4. ADMIN & STAFF DASHBOARD MODAL -->
+  <div id="admin-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl shadow-2xl max-w-5xl w-full max-h-[92vh] overflow-y-auto p-6 sm:p-8 space-y-6">
+      
+      <div class="flex justify-between items-center border-b border-slate-100 pb-4">
+        <div>
+          <span class="text-xs font-bold text-sky-700 bg-sky-50 px-2.5 py-0.5 rounded-full">School Management System</span>
+          <h3 class="text-xl sm:text-2xl font-black text-slate-900 font-heading mt-1">Ganga Driving School Staff Portal</h3>
+        </div>
+        <button onclick="closeAdminModal()" class="p-2 rounded-xl text-slate-400 hover:text-slate-600 hover:bg-slate-100">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Metrics Cards -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <div class="bg-sky-50 border border-sky-100 p-4 rounded-2xl">
+          <span class="text-xs text-sky-700 font-semibold">Total Bookings</span>
+          <div class="text-2xl font-black text-sky-900 mt-1" id="admin-stat-total">3</div>
+        </div>
+        <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-2xl">
+          <span class="text-xs text-emerald-700 font-semibold">Confirmed Active</span>
+          <div class="text-2xl font-black text-emerald-900 mt-1" id="admin-stat-confirmed">2</div>
+        </div>
+        <div class="bg-amber-50 border border-amber-100 p-4 rounded-2xl">
+          <span class="text-xs text-amber-700 font-semibold">Pending Verification</span>
+          <div class="text-2xl font-black text-amber-900 mt-1" id="admin-stat-pending">1</div>
+        </div>
+        <div class="bg-slate-100 border border-slate-200 p-4 rounded-2xl">
+          <span class="text-xs text-slate-700 font-semibold">Total Revenue (₹)</span>
+          <div class="text-2xl font-black text-slate-900 mt-1" id="admin-stat-revenue">₹12,900</div>
+        </div>
+      </div>
+
+      <!-- Action Bar -->
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
+        <div class="relative w-full sm:w-72">
+          <i data-lucide="search" class="w-4 h-4 absolute left-3 top-3 text-slate-400"></i>
+          <input type="text" id="admin-search-input" oninput="filterAdminTable()" placeholder="Search by student name/phone..." class="w-full pl-9 pr-3 py-2 text-xs rounded-xl border border-slate-300 focus:ring-2 focus:ring-sky-500 outline-none">
+        </div>
+        <div class="flex items-center space-x-2 w-full sm:w-auto justify-end">
+          <select id="admin-status-filter" onchange="filterAdminTable()" class="px-3 py-2 text-xs rounded-xl border border-slate-300 bg-white outline-none">
+            <option value="all">All Statuses</option>
+            <option value="Confirmed">Confirmed</option>
+            <option value="Pending Verification">Pending</option>
+            <option value="Completed">Completed</option>
+          </select>
+          <button onclick="exportBookingsCSV()" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-900 text-white text-xs font-semibold flex items-center">
+            <i data-lucide="download" class="w-3.5 h-3.5 mr-1.5"></i> Export CSV
+          </button>
+          <button onclick="window.print()" class="px-3.5 py-2 rounded-xl border border-slate-300 hover:bg-slate-50 text-slate-700 text-xs font-semibold flex items-center">
+            <i data-lucide="printer" class="w-3.5 h-3.5 mr-1.5"></i> Print Roster
+          </button>
+        </div>
+      </div>
+
+      <!-- Table View -->
+      <div class="border border-slate-200 rounded-2xl overflow-hidden overflow-x-auto">
+        <table class="min-w-full divide-y divide-slate-200 text-left text-xs">
+          <thead class="bg-slate-50 text-slate-600 font-bold uppercase tracking-wider">
+            <tr>
+              <th class="py-3 px-4">Student & ID</th>
+              <th class="py-3 px-4">Course & Vehicle</th>
+              <th class="py-3 px-4">Timing & Date</th>
+              <th class="py-3 px-4">Pickup Location</th>
+              <th class="py-3 px-4">Amount / Mode</th>
+              <th class="py-3 px-4">Status</th>
+              <th class="py-3 px-4 text-right">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="admin-bookings-table-body" class="divide-y divide-slate-100 bg-white font-medium text-slate-700">
+            <!-- Dynamically populated from data.js & localStorage -->
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 5. WRITE REVIEW MODAL -->
+  <div id="review-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl shadow-2xl max-w-md w-full p-6 sm:p-8 space-y-5">
+      <div class="flex justify-between items-center border-b border-slate-100 pb-3">
+        <h3 class="text-xl font-bold text-slate-900 font-heading">Write a Review</h3>
+        <button onclick="closeReviewModal()" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <form onsubmit="submitReview(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Your Full Name *</label>
+          <input type="text" id="review-name" required placeholder="e.g. Meenakshi Iyer" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 outline-none">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Course Completed</label>
+          <select id="review-course" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-sky-500 outline-none">
+            <option value="Beginner 4-Wheeler (Swift)">Beginner 4-Wheeler (Swift)</option>
+            <option value="Automatic AMT Special">Automatic AMT Special</option>
+            <option value="Comprehensive 21 Days + DL">Comprehensive 21 Days + DL</option>
+            <option value="Confidence Refresher (7 Days)">Confidence Refresher (7 Days)</option>
+            <option value="Two-Wheeler Scooty Balance">Two-Wheeler Scooty Balance</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Star Rating</label>
+          <select id="review-rating" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-sm bg-white focus:ring-2 focus:ring-sky-500 outline-none">
+            <option value="5">⭐⭐⭐⭐⭐ 5 Stars - Outstanding Experience</option>
+            <option value="4">⭐⭐⭐⭐ 4 Stars - Very Good</option>
+            <option value="3">⭐⭐⭐ 3 Stars - Average</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Your Feedback / Experience *</label>
+          <textarea id="review-comment" required rows="3" placeholder="Tell future learners how the instructors helped you overcome fear..." class="w-full px-3 py-2 rounded-xl border border-slate-300 text-sm focus:ring-2 focus:ring-sky-500 outline-none"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm shadow-md transition">
+          Publish My Review
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 6. STUDENT AUTHENTICATION MODAL (LOGIN & REGISTRATION) -->
+  <div id="student-auth-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl shadow-2xl max-w-md w-full max-h-[92vh] overflow-y-auto p-6 sm:p-8 space-y-5">
+      
+      <!-- Modal Header -->
+      <div class="flex justify-between items-start border-b border-slate-100 pb-3">
+        <div>
+          <span class="text-[10px] font-bold uppercase tracking-wider bg-sky-100 text-sky-800 px-2.5 py-0.5 rounded-full">Learner Portal</span>
+          <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 font-heading mt-1" id="auth-modal-title">Student Sign In</h3>
+        </div>
+        <button onclick="closeStudentAuthModal()" class="p-1.5 rounded-lg text-slate-400 hover:text-slate-600">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Quick 1-Click Demo Login Pill -->
+      <div class="bg-gradient-to-r from-sky-50 to-emerald-50 border border-sky-200 p-3 rounded-xl flex items-center justify-between">
+        <div>
+          <span class="text-[11px] font-bold text-slate-800 block">⚡ Quick Demo Evaluation</span>
+          <span class="text-[10px] text-slate-500">Sign in instantly as Rahul Sharma (Active Student)</span>
+        </div>
+        <button onclick="loginDemoStudent()" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-sm transition">
+          Demo Login
+        </button>
+      </div>
+
+      <!-- Tab Switcher -->
+      <div class="flex border-b border-slate-200 text-xs font-bold">
+        <button onclick="switchAuthTab('login')" id="tab-login-btn" class="flex-1 py-2.5 border-b-2 border-sky-600 text-sky-600 transition">
+          Student Login
+        </button>
+        <button onclick="switchAuthTab('register')" id="tab-register-btn" class="flex-1 py-2.5 border-b-2 border-transparent text-slate-500 hover:text-slate-800 transition">
+          New Registration
+        </button>
+      </div>
+
+      <!-- Login Form View -->
+      <form id="student-login-form" onsubmit="handleStudentLogin(event)" class="space-y-4">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Email or Mobile Number *</label>
+          <div class="relative">
+            <i data-lucide="mail" class="w-4 h-4 absolute left-3 top-3 text-slate-400"></i>
+            <input type="text" id="login-identifier" required placeholder="rahul@gmail.com or 8957519919" class="w-full pl-9 pr-3 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm focus:ring-2 focus:ring-sky-500 outline-none">
+          </div>
+        </div>
+
+        <div>
+          <div class="flex justify-between items-center mb-1">
+            <label class="block text-xs font-bold text-slate-700">Password *</label>
+            <span class="text-[10px] text-slate-400">(Default: password123)</span>
+          </div>
+          <div class="relative">
+            <i data-lucide="lock" class="w-4 h-4 absolute left-3 top-3 text-slate-400"></i>
+            <input type="password" id="login-password" required placeholder="••••••••" class="w-full pl-9 pr-3 py-2.5 rounded-xl border border-slate-300 text-xs sm:text-sm focus:ring-2 focus:ring-sky-500 outline-none">
+          </div>
+        </div>
+
+        <button type="submit" class="w-full py-3 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-bold text-sm shadow-md shadow-sky-600/25 transition flex items-center justify-center">
+          <i data-lucide="log-in" class="w-4 h-4 mr-2"></i> Access My Student Dashboard
+        </button>
+      </form>
+
+      <!-- Registration Form View (Hidden by default) -->
+      <form id="student-register-form" onsubmit="handleStudentRegister(event)" class="hidden space-y-3.5">
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Full Name (As per Aadhaar) *</label>
+          <input type="text" id="reg-name" required placeholder="e.g. Priya Sharma" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs sm:text-sm focus:ring-2 focus:ring-sky-500 outline-none">
+        </div>
+
+        <div class="grid grid-cols-2 gap-2.5">
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">WhatsApp Mobile *</label>
+            <input type="tel" id="reg-phone" required pattern="[0-9]{10}" placeholder="10-digit mobile" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs sm:text-sm focus:ring-2 focus:ring-sky-500 outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-slate-700 mb-1">Email Address *</label>
+            <input type="email" id="reg-email" required placeholder="name@email.com" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs sm:text-sm focus:ring-2 focus:ring-sky-500 outline-none">
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Enroll in Course</label>
+          <select id="reg-course" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs bg-white focus:ring-2 focus:ring-sky-500 outline-none">
+            <option value="Beginner 4-Wheeler Car Training">Beginner 4-Wheeler (15 Days)</option>
+            <option value="Comprehensive Car Mastery + DL Package">Comprehensive 4-Wheeler + DL (21 Days)</option>
+            <option value="Automatic Car Specialization (AMT/CVT)">Automatic AMT Car (15 Days)</option>
+            <option value="Confidence Refresher / Crash Course">Refresher (7 Days)</option>
+            <option value="Two-Wheeler Balance (Scooty / Bike)">Two-Wheeler Scooty/Bike (7 Days)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Create Password *</label>
+          <input type="password" id="reg-password" required placeholder="At least 6 characters" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs sm:text-sm focus:ring-2 focus:ring-sky-500 outline-none">
+        </div>
+
+        <div>
+          <label class="block text-xs font-bold text-slate-700 mb-1">Pickup Address / Society</label>
+          <input type="text" id="reg-pickup" placeholder="e.g. Sector 15 or Nearest Metro" class="w-full px-3 py-2 rounded-xl border border-slate-300 text-xs sm:text-sm focus:ring-2 focus:ring-sky-500 outline-none">
+        </div>
+
+        <button type="submit" class="w-full py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition flex items-center justify-center">
+          <i data-lucide="user-plus" class="w-4 h-4 mr-2"></i> Register & Create Account
+        </button>
+      </form>
+
+    </div>
+  </div>
+
+  <!-- 7. INTERACTIVE STUDENT DASHBOARD & LEARNER PROFILE MODAL -->
+  <div id="student-dashboard-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4">
+    <div class="bg-white rounded-3xl shadow-2xl max-w-4xl w-full max-h-[94vh] overflow-y-auto p-5 sm:p-8 space-y-6">
+      
+      <!-- Top Banner / Profile Card -->
+      <div class="bg-gradient-to-r from-sky-900 via-sky-800 to-slate-900 text-white rounded-2xl p-5 sm:p-6 shadow-md relative overflow-hidden">
+        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 relative z-10">
+          
+          <div class="flex items-center space-x-3.5">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-tr from-amber-400 to-sky-400 p-0.5 shadow-md shrink-0">
+              <img id="dash-avatar" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&q=80" alt="Student Avatar" class="w-full h-full object-cover rounded-2xl">
+            </div>
+            <div>
+              <div class="flex items-center space-x-2">
+                <h3 class="text-xl font-extrabold font-heading text-white" id="dash-student-name">Rahul Sharma</h3>
+                <span class="text-[10px] font-bold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30" id="dash-status-badge">Active Learner</span>
+              </div>
+              <p class="text-xs text-sky-200 mt-0.5">Roll No: <span class="font-mono font-bold text-amber-300" id="dash-student-id">GMD-STD-8102</span> | Ph: <span id="dash-student-phone">+91 89575 19919</span></p>
+              <p class="text-[11px] text-slate-300 mt-0.5" id="dash-course-name">Beginner 4-Wheeler Car Training (Manual)</p>
+            </div>
+          </div>
+
+          <!-- Top Actions -->
+          <div class="flex items-center space-x-2 shrink-0">
+            <button onclick="toggleStudentIdCard()" class="px-3 py-1.5 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold backdrop-blur-sm border border-white/20 flex items-center transition">
+              <i data-lucide="credit-card" class="w-3.5 h-3.5 mr-1.5 text-amber-300"></i> Digital ID
+            </button>
+            <button onclick="logoutStudent()" class="px-3 py-1.5 rounded-xl bg-rose-500/20 hover:bg-rose-500/30 text-rose-300 text-xs font-semibold border border-rose-500/30 flex items-center transition">
+              <i data-lucide="log-out" class="w-3.5 h-3.5 mr-1.5"></i> Logout
+            </button>
+            <button onclick="closeStudentDashboardModal()" class="p-1.5 rounded-xl text-slate-400 hover:text-white">
+              <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Digital ID Card Container (Expandable) -->
+      <div id="student-id-card-view" class="hidden bg-slate-50 border-2 border-slate-300 rounded-2xl p-5 relative overflow-hidden shadow-sm">
+        <div class="flex justify-between items-start border-b border-slate-200 pb-3">
+          <div class="flex items-center space-x-2">
+            <div class="w-8 h-8 rounded-lg bg-sky-600 text-white flex items-center justify-center font-bold text-xs">GM</div>
+            <div>
+              <h4 class="text-xs font-bold text-slate-900 font-heading">GANGA MOTOR DRIVING TRAINING SCHOOL</h4>
+              <p class="text-[10px] text-slate-500">Official Student Learner Identity Card | Reg: DL/2011/5892</p>
+            </div>
+          </div>
+          <button onclick="window.print()" class="text-xs text-sky-600 font-bold hover:underline flex items-center">
+            <i data-lucide="printer" class="w-3.5 h-3.5 mr-1"></i> Print ID
+          </button>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-3 text-xs">
+          <div>
+            <span class="text-slate-400 block text-[10px]">Student Name:</span>
+            <span class="font-bold text-slate-900" id="id-card-name">Rahul Sharma</span>
+            <span class="text-slate-400 block text-[10px] mt-1.5">Learner License No:</span>
+            <span class="font-mono text-slate-800" id="id-card-ll">DL-04-2026-LL-9921</span>
+          </div>
+          <div>
+            <span class="text-slate-400 block text-[10px]">Assigned Trainer:</span>
+            <span class="font-bold text-slate-900" id="id-card-trainer">Rajesh Sharma</span>
+            <span class="text-slate-400 block text-[10px] mt-1.5">Training Vehicle:</span>
+            <span class="font-medium text-slate-800" id="id-card-vehicle">Maruti Swift (Dual Control)</span>
+          </div>
+          <div class="text-right sm:text-right">
+            <span class="text-slate-400 block text-[10px]">Batch Slot:</span>
+            <span class="font-bold text-emerald-700" id="id-card-slot">7:00 AM - 7:45 AM</span>
+            <span class="text-slate-400 block text-[10px] mt-1.5">Valid Until:</span>
+            <span class="text-slate-700">Dec 31, 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Row -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        
+        <!-- Progress Metric -->
+        <div class="bg-sky-50 border border-sky-100 p-4 rounded-2xl">
+          <div class="flex justify-between items-center mb-1.5">
+            <span class="text-xs font-bold text-sky-800">Training Completion</span>
+            <span class="text-xs font-extrabold text-sky-700" id="dash-progress-pct">53%</span>
+          </div>
+          <div class="w-full bg-sky-200 h-2.5 rounded-full overflow-hidden">
+            <div id="dash-progress-fill" class="bg-sky-600 h-2.5 rounded-full transition-all duration-500" style="width: 53%;"></div>
+          </div>
+          <div class="text-[11px] text-slate-500 mt-2">
+            Completed: <strong class="text-slate-800" id="dash-completed-days">8</strong> of <span id="dash-total-days">15</span> Practical Sessions
+          </div>
+        </div>
+
+        <!-- Next Lesson Card -->
+        <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-2xl">
+          <div class="flex items-center text-xs font-bold text-emerald-800 mb-1">
+            <i data-lucide="calendar" class="w-3.5 h-3.5 mr-1 text-emerald-600"></i> Next Practical Lesson
+          </div>
+          <div class="font-bold text-slate-900 text-xs sm:text-sm mt-0.5" id="dash-next-lesson">
+            Tomorrow at 7:00 AM
+          </div>
+          <div class="text-[11px] text-slate-500 mt-1 flex items-center justify-between">
+            <span id="dash-trainer-name">Rajesh Sharma</span>
+            <button onclick="requestReschedule()" class="text-emerald-700 font-bold hover:underline">Reschedule</button>
+          </div>
+        </div>
+
+        <!-- RTO Exam Status -->
+        <div class="bg-amber-50 border border-amber-100 p-4 rounded-2xl">
+          <div class="flex items-center text-xs font-bold text-amber-800 mb-1">
+            <i data-lucide="award" class="w-3.5 h-3.5 mr-1 text-amber-600"></i> Road Safety Quiz Status
+          </div>
+          <div class="font-bold text-slate-900 text-xs sm:text-sm mt-0.5" id="dash-quiz-score">
+            14 / 15 (93% - RTO Ready)
+          </div>
+          <div class="text-[11px] text-slate-500 mt-1">
+            <button onclick="closeStudentDashboardModal(); location.href='#rto-quiz';" class="text-sky-700 font-bold hover:underline">
+              Retake Practice Quiz →
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Attendance & Skill Syllabus Matrix -->
+      <div class="space-y-3">
+        <div class="flex justify-between items-center">
+          <h4 class="text-sm font-bold text-slate-900 font-heading">Practical Driving Log & Skill Milestones</h4>
+          <span class="text-xs text-slate-500">Updated daily by instructor</span>
+        </div>
+
+        <div class="border border-slate-200 rounded-2xl overflow-hidden overflow-x-auto">
+          <table class="min-w-full divide-y divide-slate-200 text-left text-xs">
+            <thead class="bg-slate-50 text-slate-600 font-bold uppercase tracking-wider">
+              <tr>
+                <th class="py-2.5 px-3.5">Session</th>
+                <th class="py-2.5 px-3.5">Driving Topic / Skill</th>
+                <th class="py-2.5 px-3.5">Date</th>
+                <th class="py-2.5 px-3.5">Trainer Score</th>
+                <th class="py-2.5 px-3.5 text-right">Status</th>
+              </tr>
+            </thead>
+            <tbody id="dash-attendance-body" class="divide-y divide-slate-100 bg-white font-medium text-slate-700">
+              <!-- Dynamically populated from student data -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Bottom Action Row -->
+      <div class="pt-2 flex flex-wrap justify-between items-center gap-3 border-t border-slate-100">
+        <a id="dash-whatsapp-instructor" href="https://wa.me/918957519919?text=Hi%20Instructor,%20this%20is%20Rahul%20Sharma%20regarding%20tomorrow%20driving%20class." target="_blank" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center shadow-sm">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5 mr-1.5"></i> Message Assigned Instructor
+        </a>
+        <div class="flex gap-2">
+          <button onclick="openBookingModal()" class="px-4 py-2.5 rounded-xl border border-slate-300 hover:bg-slate-50 text-slate-700 font-bold text-xs">
+            Book Makeup Class
+          </button>
+          <button onclick="closeStudentDashboardModal()" class="px-4 py-2.5 rounded-xl bg-slate-900 text-white font-bold text-xs">
+            Close
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 8. RESPONSIVE MOBILE BOTTOM STICKY NAVIGATION BAR -->
+  <div class="lg:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 py-2 px-3 shadow-2xl flex justify-around items-center text-[10px] font-semibold text-slate-600">
+    <a href="#home" class="flex flex-col items-center hover:text-sky-600 transition">
+      <i data-lucide="home" class="w-4 h-4 mb-0.5"></i>
+      <span>Home</span>
+    </a>
+    <a href="#courses" class="flex flex-col items-center hover:text-sky-600 transition">
+      <i data-lucide="car" class="w-4 h-4 mb-0.5"></i>
+      <span>Courses</span>
+    </a>
+    <a href="#rto-quiz" class="flex flex-col items-center hover:text-sky-600 transition">
+      <i data-lucide="file-check-2" class="w-4 h-4 mb-0.5 text-emerald-600"></i>
+      <span>RTO Quiz</span>
+    </a>
+    <button onclick="openStudentAuthModal()" class="flex flex-col items-center hover:text-sky-600 transition relative">
+      <i data-lucide="user-check" class="w-4 h-4 mb-0.5 text-sky-600"></i>
+      <span id="mobile-nav-user-label">Portal</span>
+      <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 absolute top-0 right-1"></span>
+    </button>
+    <button onclick="openBookingModal()" class="flex flex-col items-center text-white bg-sky-600 px-3 py-1 rounded-xl shadow-md">
+      <i data-lucide="calendar" class="w-4 h-4 mb-0.5"></i>
+      <span>Book</span>
+    </button>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div id="toast-container"></div>
+
+  <!-- Application Logic Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>
